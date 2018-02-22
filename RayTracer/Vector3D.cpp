@@ -29,6 +29,12 @@ Vector3D Vector3D::operator/ (const double _a)const
 	return (Vector3D(x / _a, y / _a, z / _a));
 }
 
+Vector3D& Vector3D::hat(void) {
+	double length = sqrt(x * x + y * y + z * z);
+	x /= length; y /= length; z /= length;
+	return (*this);
+}
+
 void Vector3D::Normalizar()
 {
 	double Length = sqrt(x * x + y * y + z * z);

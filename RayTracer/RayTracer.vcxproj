@@ -151,6 +151,8 @@
     <ClInclude Include="Constantes.h" />
     <ClInclude Include="Esfera.h" />
     <ClInclude Include="EsferaSola.h" />
+    <ClInclude Include="Luz.h" />
+    <ClInclude Include="LuzPuntual.h" />
     <ClInclude Include="Mundo.h" />
     <ClInclude Include="Normal.h" />
     <ClInclude Include="ObjetoGeometrico.h" />
@@ -168,6 +170,8 @@
     <ClCompile Include="ColorRGB.cpp" />
     <ClCompile Include="Esfera.cpp" />
     <ClCompile Include="EsferaSola.cpp" />
+    <ClCompile Include="Luz.cpp" />
+    <ClCompile Include="LuzPuntual.cpp" />
     <ClCompile Include="Mundo.cpp" />
     <ClCompile Include="Normal.cpp" />
     <ClCompile Include="ObjetoGeometrico.cpp" />

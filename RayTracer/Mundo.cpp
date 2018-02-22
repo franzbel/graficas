@@ -30,6 +30,7 @@ Mundo::~Mundo()
 	}
 
 	delete_objects();
+	delete_lights();
 }
 void Mundo::agregarObjetoGeometrico(ObjetoGeometrico* ptr_objeto)
 {
@@ -38,13 +39,19 @@ void Mundo::agregarObjetoGeometrico(ObjetoGeometrico* ptr_objeto)
 
 void Mundo::construir(void) {
 	
-	vp.establecerRhor(200);
-	vp.establecerRver(200);
-	vp.establecerS(1.0);
+	vp.establecerRhor(800);
+	vp.establecerRver(700);
+	vp.establecerS(0.4);
 	colorFondo = blanco;
 	tracer_ptr = new EsferaSola(this);
 	esfera.establecerCentro(0.0);
-	esfera.establecerRadio(45);
+	esfera.establecerRadio(90);
+	// Luces
+	LuzPuntual* ptrLuzPuntual = new LuzPuntual;
+	ptrLuzPuntual->establecerUbicacion(0.0, 160.0, 200.0);
+	ptrLuzPuntual->establecerColor(1.0,1.0,1.0);
+	agregarLuz(ptrLuzPuntual);
+
 }
 // Vista paralela ortografica
 void Mundo::dibujarEscena() const
@@ -81,6 +88,10 @@ void Mundo::dibujarEscena() const
 	salida.savebmp("escena.bmp", Rhor, Rver, dpi, colores);
 }
 
+void Mundo::agregarLuz(Luz* ptrLuz)
+{
+	luces.push_back(ptrLuz);
+}
 
 
 void Mundo::delete_objects(void) {
@@ -92,6 +103,17 @@ void Mundo::delete_objects(void) {
 	}
 
 	objetos.erase(objetos.begin(), objetos.end());
+}
+
+void Mundo::delete_lights(void) {
+	int num_lights = luces.size();
+
+	for (int j = 0; j < num_lights; j++) {
+		delete luces[j];
+		luces[j] = NULL;
+	}
+
+	luces.erase(luces.begin(), luces.end());
 }
 
 

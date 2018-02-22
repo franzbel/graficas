@@ -7,6 +7,8 @@
 #include "Esfera.h"
 #include "Rayo.h"
 
+#include "Luz.h"
+#include "LuzPuntual.h"
 using namespace std;
 
 class Mundo
@@ -19,7 +21,7 @@ public:
 	void construir();
 	void dibujarEscena() const;
 	//void guardarImagen();
-
+	void agregarLuz(Luz* ptrLuz);
 
 public:
 	ViewPlane vp;
@@ -27,8 +29,12 @@ public:
 	Tracer*	tracer_ptr;
 	Esfera esfera;
 	vector<ObjetoGeometrico*> objetos;
+
+	vector<Luz*> luces;
 	
 private:
 	void delete_objects(void);
+
+	void delete_lights(void);
 };
 

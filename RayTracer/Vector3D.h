@@ -12,6 +12,7 @@ public:
 	double operator*(const Vector3D& _v) const;   // Producto escalar
 	Vector3D operator+ (const Vector3D& _v) const;// Sumar un vector
 	Vector3D operator/ (const double _a)const;	  // Dividir por un numero por la derecha	
+	Vector3D& hat();							  // Convertir el vector a un vector unitario y retornar el vector
 	void Normalizar();   						  // Convertir el vector a un vector unitario
 	void Mostrar();								  // Mostrar el vector	
 

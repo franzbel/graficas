@@ -63,6 +63,12 @@
     <ClInclude Include="EsferaSola.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Luz.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="LuzPuntual.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -108,6 +114,12 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="EsferaSola.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Luz.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="LuzPuntual.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
